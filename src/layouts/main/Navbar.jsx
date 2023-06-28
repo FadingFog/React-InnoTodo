@@ -1,7 +1,7 @@
 import {AppBar, Box, Toolbar} from "@mui/material";
 import {Logo} from "components/navigation/Logo.jsx";
 import {StyledNavButton} from "components/navigation/NavButtons.jsx";
-import AppRegistrationIcon from "@mui/icons-material/AppRegistration.js";
+import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 
 
 const navItems = [
@@ -10,7 +10,7 @@ const navItems = [
   {title: 'Pricing', path: '/pricing'},
 ]
 
-export const NavBar = () => {
+export const Navbar = () => {
   return (
     <AppBar position="sticky" color="secondary">
       <Toolbar disableGutters sx={{padding: '0 5%'}}>

@@ -1,11 +1,11 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import {MainLayout} from "./layouts/main/MainLayout";
-import {DashboardLayout} from "./layouts/dashboard/DashboardLayout";
+import {MainLayout} from "layouts/main/MainLayout.jsx";
+import {AppLayout} from "layouts/app/AppLayout.jsx";
 import {DashboardAppPage} from "src/pages/app/DashboardAppPage.jsx";
-import {Page404} from "./pages/Page404";
-import {FrontPage} from "./pages/FrontPage";
-import {LoginPage} from "./pages/LoginPage";
-import {RegisterPage} from "./pages/RegisterPage";
+import {Page404} from "pages/Page404.jsx";
+import {FrontPage} from "pages/FrontPage.jsx";
+import {LoginPage} from "pages/LoginPage.jsx";
+import {RegisterPage} from "pages/RegisterPage.jsx";
 import {AuthLayout} from "layouts/auth/AuthLayout.jsx";
 import {AccountAppPage} from "pages/app/AccountAppPage.jsx";
 import {ListsAppPage} from "pages/app/ListsAppPage.jsx";
@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
   },
   {
     path: '/app',
-    element: <DashboardLayout />,
+    element: <AppLayout />,
     children: [
       {element: <Navigate to="/app/dashboard" replace />, index: true},
       {path: 'dashboard', element: <DashboardAppPage />},
