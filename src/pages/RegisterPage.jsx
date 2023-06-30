@@ -1,6 +1,6 @@
-import {Button, Link, Stack, TextField, Typography} from "@mui/material";
 import {Link as RouterLink} from "react-router-dom";
-import {OAuthStack} from "components/auth/OAuthStack.jsx";
+import {Button, Link, Stack, TextField, Typography} from "@mui/material";
+import {OAuthStack} from "components/auth/OAuthStack";
 
 export const RegisterPage = () => {
   return (

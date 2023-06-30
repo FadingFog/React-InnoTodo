@@ -1,3 +1,5 @@
+import {useState} from "react";
+import {Link as RouterLink} from "react-router-dom";
 import {
   Button,
   Divider,
@@ -10,9 +12,7 @@ import {
   TextField,
   Typography
 } from "@mui/material";
-import {OAuthStack} from "components/auth/OAuthStack.jsx";
-import {Link as RouterLink} from "react-router-dom";
-import {useState} from "react";
+import {OAuthStack} from "components/auth/OAuthStack";
 import {Visibility, VisibilityOff} from "@mui/icons-material";
 
 export const LoginPage = () => {

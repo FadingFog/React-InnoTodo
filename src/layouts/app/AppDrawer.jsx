@@ -1,3 +1,5 @@
+import {useState} from "react";
+import {NavLink} from "react-router-dom";
 import {
   Drawer as MuiDrawer,
   IconButton,
@@ -8,15 +10,12 @@ import {
   ListItemText,
   styled
 } from "@mui/material";
-import {useState} from "react";
-import {NavLink} from "react-router-dom";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ChecklistIcon from "@mui/icons-material/Checklist";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
 
 const drawerItems = [
   {title: 'Account', icon: <AccountBoxIcon />, path: '/app/account'},

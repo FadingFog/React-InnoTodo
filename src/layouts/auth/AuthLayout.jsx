@@ -1,5 +1,5 @@
-import {Container, Paper, Stack} from "@mui/material";
 import {Outlet} from "react-router-dom";
+import {Container, Paper, Stack} from "@mui/material";
 
 export const AuthLayout = () => {
 	return (

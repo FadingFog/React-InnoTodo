@@ -1,6 +1,6 @@
 import {Button, Stack, Typography} from "@mui/material";
-import GoogleIcon from "@mui/icons-material/Google.js";
-import FacebookIcon from "@mui/icons-material/Facebook.js";
+import GoogleIcon from "@mui/icons-material/Google";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 export const OAuthStack = () => {
 	return (

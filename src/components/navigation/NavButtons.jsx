@@ -1,6 +1,5 @@
 import {styled, Typography} from "@mui/material";
-import {RouterButton} from "components/navigation/RouterButton.jsx";
-
+import {RouterButton} from "components/navigation/RouterButton";
 
 export const NavButton = ({title, ...props}) => {
   return (

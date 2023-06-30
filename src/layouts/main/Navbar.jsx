@@ -1,8 +1,7 @@
 import {AppBar, Box, Toolbar} from "@mui/material";
-import {Logo} from "components/navigation/Logo.jsx";
-import {StyledNavButton} from "components/navigation/NavButtons.jsx";
+import {Logo} from "components/navigation/Logo";
+import {StyledNavButton} from "components/navigation/NavButtons";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
-
 
 const navItems = [
   {title: 'Features', path: '/features'},

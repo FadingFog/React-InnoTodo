@@ -1,15 +1,15 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import {MainLayout} from "layouts/main/MainLayout.jsx";
-import {AppLayout} from "layouts/app/AppLayout.jsx";
-import {DashboardAppPage} from "src/pages/app/DashboardAppPage.jsx";
-import {Page404} from "pages/Page404.jsx";
-import {FrontPage} from "pages/FrontPage.jsx";
-import {LoginPage} from "pages/LoginPage.jsx";
-import {RegisterPage} from "pages/RegisterPage.jsx";
-import {AuthLayout} from "layouts/auth/AuthLayout.jsx";
-import {AccountAppPage} from "pages/app/AccountAppPage.jsx";
-import {ListsAppPage} from "pages/app/ListsAppPage.jsx";
-import {StatisticsAppPage} from "pages/app/StatisticsAppPage.jsx";
+import {AccountAppPage} from "pages/app/AccountAppPage";
+import {AppLayout} from "layouts/app/AppLayout";
+import {AuthLayout} from "layouts/auth/AuthLayout";
+import {DashboardAppPage} from "src/pages/app/DashboardAppPage";
+import {FrontPage} from "pages/FrontPage";
+import {ListsAppPage} from "pages/app/ListsAppPage";
+import {LoginPage} from "pages/LoginPage";
+import {MainLayout} from "layouts/main/MainLayout";
+import {Page404} from "pages/Page404";
+import {RegisterPage} from "pages/RegisterPage";
+import {StatisticsAppPage} from "pages/app/StatisticsAppPage";
 
 export const router = createBrowserRouter([
   {
