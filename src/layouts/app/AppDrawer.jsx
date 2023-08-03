@@ -1,27 +1,18 @@
 import {useState} from "react";
-import {NavLink} from "react-router-dom";
-import {
-  Drawer as MuiDrawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  styled
-} from "@mui/material";
+import {Drawer as MuiDrawer, IconButton, List as MuiList, styled} from "@mui/material";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ChecklistIcon from "@mui/icons-material/Checklist";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import {DrawerHeadingItem} from "layouts/app/AppDrawerItems";
 
-const drawerItems = [
+const drawerHeadingItems = [
   {title: 'Account', icon: <AccountBoxIcon />, path: '/app/account'},
   {title: 'Dashboard', icon: <DashboardIcon />, path: '/app/dashboard'},
-  {title: 'Lists', icon: <ChecklistIcon />, path: '/app/lists'},
   {title: 'Statistics', icon: <QueryStatsIcon />, path: '/app/statistics'},
+  {title: 'Lists', icon: <ChecklistIcon />, path: '/app/lists'},
 ]
 
 const drawerWidth = 180;
@@ -71,16 +62,6 @@ const Drawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== 'open'})
   }),
 );
 
-const StyledListItem = styled(ListItem)({
-  color: 'inherit',
-  '&.active': {
-    color: 'text.primary',
-    bgcolor: 'action.selected',
-    fontWeight: 'fontWeightBold',
-  },
-});
-
-
 export const AppDrawer = () => {
   const [open, setOpen] = useState(true)
 
@@ -97,30 +78,11 @@ export const AppDrawer = () => {
           </IconButton>
         </DrawerHeader>
 
-        <List>
-          {drawerItems.map((item, index) => (
-            <StyledListItem key={index} component={NavLink} to={item.path} disablePadding>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  px: 2.5,
-                  justifyContent: open ? 'initial' : 'center',
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                  }}
-                >
-                  {item.icon}
-                </ListItemIcon>
-                <ListItemText primary={item.title} sx={{opacity: open ? 1 : 0}} />
-              </ListItemButton>
-            </StyledListItem>
+        <MuiList>
+          {drawerHeadingItems.map((item, index) => (
+            <DrawerHeadingItem key={index} {...item} open={open} />
           ))}
-        </List>
+        </MuiList>
       </Drawer>
     </>
   )
