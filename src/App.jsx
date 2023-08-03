@@ -1,11 +1,11 @@
 import {RouterProvider} from "react-router-dom";
-import {router} from "./routes.jsx";
-import GlobalStyles from "theme/GlobalStyles.jsx";
+import {router} from "routes";
+import GlobalStyles from "theme/GlobalStyles";
 import createCache from "@emotion/cache";
 import {CacheProvider} from "@emotion/react";
 
 
-const cacheNoPrefixer = createCache({
+const cacheNoPrefixer = createCache({  // Removes prefixes in css
   key: "noprefixer",
   stylisPlugins: []
 });
